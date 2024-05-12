@@ -1,1 +1,1 @@
-test file
+Hello this is info from VPS. 
