@@ -28,7 +28,7 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          docker pull vps-test:${{ github.sha }}
+          docker pull ${{secrets.DOCKER_USERNAME}}/vps-test:${{ github.sha }}
           docker stop vps-test || true
           docker rm vps-test || true
-          docker run -d --name vps-test -p 80:80 vps-test:${{ github.sha }}
+          docker run -d --name vps-test -p 80:80 ${{secrets.DOCKER_USERNAME}}/vps-test:${{ github.sha }}
