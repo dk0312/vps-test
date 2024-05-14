@@ -1,1 +1,2 @@
 Hello this is info from VPS. 
+Message from Macbook.
